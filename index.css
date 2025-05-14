@@ -1,7 +1,10 @@
 /* index.html */
 body {
   margin: 0;
+}
 
+input[type=checkbox] {
+  transform: scale(1.5);
 }
 
 #PDFandGIFconfig {
@@ -18,8 +21,162 @@ body#GIF {
 
 }
 
+body#cmd_mv {
+  background-color: #121212;
+  color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cmd_mv form {
+  width: 100%;
+}
+
+#cmd_mv form>div {
+  width: 90%;
+  margin: 40px 100px;
+  font-family: monospace;
+  font-size: xx-large;
+}
+
+#cmd_mv form>div>div {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.command_line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.command_line>div {
+  margin: 24px;
+}
+
+#cmd_mv div>span, #cmd_mv div>span select {
+  /* padding: 0 10px; */
+  font-weight: 700;
+}
+
+#cmd_mv .cmd, #cmd_mkdir .cmd {
+  color: darkturquoise
+}
+
+#cmd_mv .dirname {
+  color: chartreuse
+}
+
+#cmd_mv .bookname {
+  color: gold
+}
+
+#cmd_mv .to, #cmd_mv .to select, #library select {
+  color: deeppink;
+  font-weight: 700;
+
+}
+
+#main_pdf .myButton {
+  box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color: #fc8d83;
+  border-radius: 6px;
+  border: 1px solid #d83526;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+#main_pdf .myButton:hover {
+  background: linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color: #e4685d;
+}
+
+#main_pdf .myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+
+#command_archive_store .myButton {
+	box-shadow:inset 0px 1px 0px 0px #e184f3;
+	background:linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+	background-color:#c123de;
+	border-radius:6px;
+	border:1px solid #a511c0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:24px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #9b14b3;
+}
+#command_archive_store .myButton:hover {
+	background:linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+	background-color:#a20dbd;}
+#command_archive_store .myButton:active {
+	position:relative;
+	top:1px;
+}
+
+        
+
+#cmd_mv .myButton, #cmd_mkdir .myButton {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #777777;
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+#cmd_mv .myButton:hover, #cmd_mkdir .myButton:hover {
+  background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  background-color: #dfdfdf;
+}
+
+#cmd_mv .myButton:active, #cmd_mkdir .myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+
+
+#cmd_mv select, #library select {
+  background-color: #121212;
+  /* color: azure; */
+  font-family: monospace;
+  font-size: xx-large;
+  border-color: #222222;
+  /* text-align: right; */
+}
+
+#cmd_mkdir [name="new_dir"] {
+  background-color: midnightblue;
+  color: cornflowerblue;
+}
+
 body#idx {
-  background: #ebebeb;
+  background: #fff4f4;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -28,7 +185,7 @@ body#idx {
   font-size: x-large;
 }
 
-#main_grid, #main_pdf, #main_catalog_page, #main_PDFAndGIF, #main_completion {
+#main_grid, #main_pdf, #main_catalog_page, #main_PDFAndGIF, #main_completion, #main_library, #main_archive {
   flex-basis: 100%;
   width: 1200px
 }
@@ -37,13 +194,13 @@ body#idx #main div {
   margin: 10px 0;
 }
 
-#list_grid, #list_pdf, #list_catalog_page, #list_PDFAndGIF, #list_completion {
+#list_grid, #list_pdf, #list_catalog_page, #list_PDFAndGIF, #list_completion, #list_library, #list_archive {
   padding: 20px 48px;
   font-size: 20px;
   border-radius: 10px;
 }
 
-#status_grid, #status_pdf, #status_catalog_page, #status_PDFAndGIF, #status_completion {
+#status_grid, #status_pdf, #status_catalog_page, #status_PDFAndGIF, #status_completion, #status_library, #status_archive {
   padding: 10px;
   font-family: cursive;
 }
@@ -68,10 +225,27 @@ body#idx #main div {
   background: rgb(216, 193, 255);
 }
 
-#command_pdf {
+#list_library {
+  background: rgb(205, 177, 136);
+}
+
+#list_archive {
+  background: rgb(167, 167, 167);
+}
+
+#list_completion a {
+  text-decoration: none;
+}
+
+#command_pdf, #command_archive_store {
   padding: 10px;
   text-align: center;
   font-family: cursive;
+}
+
+[name="f_upload"] {
+  text-align: center;
+  margin: 20px;
 }
 
 /* pdfs */
