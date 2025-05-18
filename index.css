@@ -107,30 +107,33 @@ body#cmd_mv {
 
 
 #command_archive_store .myButton {
-	box-shadow:inset 0px 1px 0px 0px #e184f3;
-	background:linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
-	background-color:#c123de;
-	border-radius:6px;
-	border:1px solid #a511c0;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:24px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #9b14b3;
-}
-#command_archive_store .myButton:hover {
-	background:linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
-	background-color:#a20dbd;}
-#command_archive_store .myButton:active {
-	position:relative;
-	top:1px;
+  box-shadow: inset 0px 1px 0px 0px #e184f3;
+  background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+  background-color: #c123de;
+  border-radius: 6px;
+  border: 1px solid #a511c0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #9b14b3;
 }
 
-        
+#command_archive_store .myButton:hover {
+  background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+  background-color: #a20dbd;
+}
+
+#command_archive_store .myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+
 
 #cmd_mv .myButton, #cmd_mkdir .myButton {
   box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -159,7 +162,10 @@ body#cmd_mv {
   top: 1px;
 }
 
-
+.nodata {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
 
 #cmd_mv select, #library select {
   background-color: #121212;
@@ -286,7 +292,7 @@ select {
   color: firebrick;
 }
 
-body#grid #main {
+body#grid #main, body#rot #main {
   margin-top: 256px;
   display: flex;
   flex-wrap: wrap;
@@ -301,6 +307,46 @@ body#grid #main div {
 
 body#grid #main div img {
   max-height: 720px;
+  max-height: 560px;
+  max-width: 100%;
+}
+
+body#rot #main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body#rot #main>div {
+  flex-basis: 50%;
+}
+
+/* body#rot #main_090, body#rot #main_270 { */
+body#rot #main_090, body#rot>div #main_270 {
+  flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+body#rot #main_090 div, body#rot #main_270 div {
+  margin: 20px;
+}
+
+body#rot #main_090 {
+  background-color: #fbe8ff;
+}
+
+body#rot #main_270 {
+  background-color: #c5ffa9;
+}
+
+body#rot #main_090 img, body#rot #main_270 img {
+  max-height: 400px;
+}
+
+#main .caption {
+  text-align: center;
+  padding: 20px 0;
 }
 
 #fix>form>div {
