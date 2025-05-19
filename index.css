@@ -105,6 +105,20 @@ body#cmd_mv {
   top: 1px;
 }
 
+#main_menu {
+  flex-basis: 100%;
+  padding: 24px 32px 0px 32px;
+}
+
+#list_menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#list_menu>div {
+  /* flex: auto; */
+  margin: 0 12px;
+}
 
 #command_archive_store .myButton {
   box-shadow: inset 0px 1px 0px 0px #e184f3;
@@ -183,17 +197,18 @@ body#cmd_mv {
 
 body#idx {
   background: #fff4f4;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   justify-content: center;
-  padding: 10px 100px;
+  padding: 10px 60px;
   font-family: monospace;
   font-size: x-large;
 }
 
 #main_grid, #main_pdf, #main_catalog_page, #main_PDFAndGIF, #main_completion, #main_library, #main_archive {
   flex-basis: 100%;
-  width: 1200px
+  width: 1200px;
+  width: auto;
 }
 
 body#idx #main div {
@@ -342,6 +357,16 @@ body#rot #main_270 {
 
 body#rot #main_090 img, body#rot #main_270 img {
   max-height: 400px;
+}
+
+#both {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#left, #right {
+  flex-basis: 45%;
+  padding: 32px;
 }
 
 #main .caption {
