@@ -6,6 +6,8 @@
   margin: auto;
   width: 600px;
   width: auto;
+  height: 80%;
+  height: calc(100% - 144px);
 }
 
 table {
@@ -494,14 +496,15 @@ th.chemistry:active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 1600px;
   margin: 0 auto;
+  height: 80%;
 }
 
 .tab_item {
   width: calc(100%/8);
-  height: 50px;
+  height: 32px;
   border-bottom: 3px solid #5ab4bd;
   background-color: #d9d9d9;
-  line-height: 50px;
+  line-height: 32px;
   font-size: 16px;
   text-align: center;
   color: #565656;
@@ -599,7 +602,8 @@ input[name="tab_item"] {
 
 #cmd_mkdir {
   background-color: #121212;
-  padding: 24px;
+  /* padding: 24px; */
+  padding: 8px
 }
 
 #cmd_mkdir form>div {

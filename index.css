@@ -147,7 +147,18 @@ body#cmd_mv {
   top: 1px;
 }
 
-
+[name="t_all"]{
+  background-color: blue;
+  color: white;
+}
+[name="tr_all"]{
+  background-color: rgb(0, 112, 2);
+  color: white;
+}
+[name="r_all"]{
+  background-color: rgb(255, 0, 30);
+  color: white;
+}
 
 #cmd_mv .myButton, #cmd_mkdir .myButton {
   box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -203,6 +214,10 @@ body#idx {
   padding: 10px 60px;
   font-family: monospace;
   font-size: x-large;
+}
+
+body#idx span.cmd img{
+      width: 24px;
 }
 
 #main_grid, #main_pdf, #main_catalog_page, #main_PDFAndGIF, #main_completion, #main_library, #main_archive {
