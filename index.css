@@ -353,7 +353,7 @@ body#idx #main div {
   font-family: cursive;
 }
 
-[name="f_upload"] {
+[name*="f_upload"] {
   text-align: center;
   margin: 20px;
 }
