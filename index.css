@@ -721,3 +721,11 @@ a img:hover {
 .details p span {
   color: chartreuse;
 }
+
+input[name="file_list"] {
+  display: none;
+}
+
+a {
+  display: inline-block;
+}
