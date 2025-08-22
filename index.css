@@ -729,3 +729,7 @@ input[name="file_list"] {
 a {
   display: inline-block;
 }
+
+.nolink {
+  filter: grayscale(100%);
+}
